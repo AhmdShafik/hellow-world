@@ -7,6 +7,7 @@ const Greet = (props) => {
     const {name,heroName}=props
     return (
         <div>
+            
             <h3>Hello {name} - {heroName}</h3>
             <p>{props.children}</p>
         </div>
