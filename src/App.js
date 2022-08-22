@@ -30,6 +30,14 @@ import ClickCounterTwo from "./Components/Advanced/Render-Props/ClickCounterTwo"
 import HoverCounterTwo from "./Components/Advanced/Render-Props/HoverCounterTwo";
 import User from "./Components/Advanced/Render-Props/User";
 import ConterComponent from "./Components/Advanced/Render-Props/Counter";
+import ClassCounter from "./Hooks/State/ClassCounter";
+import HookCounter from "./Hooks/State/HookCounter";
+import HookCounterTwo from "./Hooks/State/HookCounterTwo";
+import HookCounterThree from "./Hooks/State/HookCounterThree";
+import HookCounterFour from "./Hooks/State/HookCounterFour";
+import ClassCounterOne from "./Hooks/Effect/ClassCounterOne";
+import HookCounterOne from "./Hooks/Effect/HookCounterOne";
+import ClassMouse from "./Hooks/Effect/ClassMouse";
 
 function App() {
   return (
@@ -38,8 +46,17 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <div>Hellooo Shifoo</div>
         <div>
-          
-          <ConterComponent
+          <Greet name="Shifoo" heroName="From React" />
+          <Hello />
+          <ClassMouse /> 
+          <HookCounterOne />
+          <ClassCounterOne /> 
+          <HookCounterFour />
+          {/* <HookCounterThree /> */}
+          {/* <HookCounterTwo /> */}
+          {/* <HookCounter /> */}
+          {/* <ClassCounter />
+          {/* <ConterComponent
             render={(count, incrementCount) => (
               <ClickCounterTwo count={count} incrementCount={incrementCount} />
             )}
@@ -49,7 +66,7 @@ function App() {
             render={(count, incrementCount) => (
               <HoverCounterTwo count={count} incrementCount={incrementCount} />
             )}
-          />
+          /> */}
           {/* <ClickCounterTwo />
           <HoverCounterTwo />
           <User name={(isLoggedIn) => (isLoggedIn ? "Shifoo" : "Shafik")} /> */}
@@ -96,7 +113,7 @@ function App() {
           <Welcome />
           <Hello /> */}
         </div>
-        <br></br>
+        {/* <br></br>
         <br></br>
         <br></br>
         <a
@@ -106,7 +123,7 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
+        </a> */}
       </header>
     </div>
   );
