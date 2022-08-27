@@ -18,7 +18,7 @@ const reducer = (state , action) =>
 function CounterOne() {
    const [count , dispatch] = useReducer(reducer , initialState);
   return (
-    <div>
+    <div> 
         <div>Count : {count}</div>
       <button onClick={()=>dispatch('increment')}> Increment </button>
       <button onClick={()=>dispatch('decrement')}> Decrement </button>
