@@ -1,17 +1,5 @@
 import logo from "./logo.svg";
 import "./App.css";
-import Greet from "./Components/Greet";
-import Welcome from "./Components/Welcome";
-import Hello from "./Components/Hello";
-import Message from "./Components/Message";
-import Counter from "./Components/Counter";
-import ClassClick from "./Components/Event-Handling/ClassClick";
-import EventBinding from "./Components/Event-Handling/EventBinding";
-import ParentComponentPassingData from "./Components/Passing-Data/ParentComponent";
-import UserGreeting from "./Components/Conditional-Redering/UserGreeting";
-import NameList from "./Components/List-Rendering/NameList";
-import Stylesheet from "./Components/Styling/Stylesheet";
-import Inline from "./Components/Styling/Inline";
 import "./Styles/appStyles.css";
 import styles from "./Styles/appStyles.module.css";
 import Form from "./Components/Forms/Form";
@@ -46,13 +34,12 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <div>Hellooo Shifoo</div>
         <div>
-          <HookCounterOne />
-          {/* <Greet name="Shifoo" heroName="From React" />
+          <Greet name="Shifoo" heroName="From React" />
           <Hello />
           <ClassMouse /> 
           <HookCounterOne />
           <ClassCounterOne /> 
-          <HookCounterFour /> */}
+          <HookCounterFour />
           {/* <HookCounterThree /> */}
           {/* <HookCounterTwo /> */}
           {/* <HookCounter /> */}
@@ -114,17 +101,6 @@ function App() {
           <Welcome />
           <Hello /> */}
         </div>
-        {/* <br></br>
-        <br></br>
-        <br></br>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
       </header>
     </div>
   );
