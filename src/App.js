@@ -46,12 +46,13 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <div>Hellooo Shifoo</div>
         <div>
-          <Greet name="Shifoo" heroName="From React" />
+          <HookCounterOne />
+          {/* <Greet name="Shifoo" heroName="From React" />
           <Hello />
           <ClassMouse /> 
           <HookCounterOne />
           <ClassCounterOne /> 
-          <HookCounterFour />
+          <HookCounterFour /> */}
           {/* <HookCounterThree /> */}
           {/* <HookCounterTwo /> */}
           {/* <HookCounter /> */}

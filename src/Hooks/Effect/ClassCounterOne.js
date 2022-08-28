@@ -16,10 +16,10 @@ class ClassCounterOne extends Component {
 
   componentDidUpdate(prevProps, prevState) {
      
-      if(this.state.count!== prevState.count){
+      // if(this.state.count!== prevState.count){
         console.log('Name value Updated')
         document.title = `Clicked ${this.state.count} times`;
-      }
+      // }
     
   }
 
