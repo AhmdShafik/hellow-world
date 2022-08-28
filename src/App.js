@@ -1,33 +1,34 @@
 import logo from "./logo.svg";
 import "./App.css";
 import "./Styles/appStyles.css";
-import styles from "./Styles/appStyles.module.css";
-import Form from "./Components/Forms/Form";
-import LifeCycleA from "./Components/Life-Cycle/LifeCycleA";
-import FragmentDemo from "./Components/Advanced/Fragment/FragmentDemo";
-import PureComp from "./Components/Advanced/Pure-Component/PureComp";
-import ParentComponent from "./Components/Advanced/Pure-Component/ParentComponent";
-import RefsDemo from "./Components/Advanced/Refs/RefsDemo";
-import ForwardRefParentInput from "./Components/Advanced/Refs/ForwardRefParentInput";
-import PortalDemo from "./Components/Advanced/Portal/PortalDemo";
-import Hero from "./Components/Advanced/Error-Boundaries/Hero";
-import ErrorBoundary from "./Components/Advanced/Error-Boundaries/ErrorBoundary";
-import ClickCounter from "./Components/Advanced/Higher-Order-Components/ClickCounter";
-import HoverCounter from "./Components/Advanced/Higher-Order-Components/HoverCounter";
-import ClickCounterTwo from "./Components/Advanced/Render-Props/ClickCounterTwo";
-import HoverCounterTwo from "./Components/Advanced/Render-Props/HoverCounterTwo";
-import User from "./Components/Advanced/Render-Props/User";
-import ConterComponent from "./Components/Advanced/Render-Props/Counter";
-import ClassCounter from "./Hooks/State/ClassCounter";
-import HookCounter from "./Hooks/State/HookCounter";
-import HookCounterTwo from "./Hooks/State/HookCounterTwo";
-import HookCounterThree from "./Hooks/State/HookCounterThree";
-import HookCounterFour from "./Hooks/State/HookCounterFour";
-import ClassCounterOne from "./Hooks/Effect/ClassCounterOne";
-import HookCounterOne from "./Hooks/Effect/HookCounterOne";
-import ClassMouse from "./Hooks/Effect/ClassMouse";
+import Greet from "./Components/Greet";
+import CounterTwo from "./Hooks/Reducer/CounterTwo";
+import CounterThree from "./Hooks/Reducer/CounterThree";
+import ReducerComponentA from "./Hooks/Reducer/ReducerComponentA";
+import React ,{useReducer} from 'react'
+import ReducerComponentB from "./Hooks/Reducer/ReducerComponentB";
+import ReducerComponentC from "./Hooks/Reducer/ReducerComponentC";
+import DataFetchingOne from "./Hooks/Reducer/DataFetchingOne";
+import MemoCounter from "./Hooks/Memo/MemoCounter";
+import FocusInput from "./Hooks/Ref/FocusInput";
+
+export const CountContext=React.createContext();
+const initialState = 0;
+const reducer = (state, action) => {
+  switch (action) {
+    case "increment":
+      return state + 1;
+    case "decrement":
+      return state - 1;
+    case "reset":
+      return initialState;
+    default:
+      return state;
+  }
+};
 
 function App() {
+  const [count, dispatch] = useReducer(reducer, initialState);
   return (
     <div className="App">
       <header className="App-header">
@@ -35,71 +36,17 @@ function App() {
         <div>Hellooo Shifoo</div>
         <div>
           <Greet name="Shifoo" heroName="From React" />
-          <Hello />
-          <ClassMouse /> 
-          <HookCounterOne />
-          <ClassCounterOne /> 
-          <HookCounterFour />
-          {/* <HookCounterThree /> */}
-          {/* <HookCounterTwo /> */}
-          {/* <HookCounter /> */}
-          {/* <ClassCounter />
-          {/* <ConterComponent
-            render={(count, incrementCount) => (
-              <ClickCounterTwo count={count} incrementCount={incrementCount} />
-            )}
-          />
-
-          <ConterComponent
-            render={(count, incrementCount) => (
-              <HoverCounterTwo count={count} incrementCount={incrementCount} />
-            )}
-          /> */}
-          {/* <ClickCounterTwo />
-          <HoverCounterTwo />
-          <User name={(isLoggedIn) => (isLoggedIn ? "Shifoo" : "Shafik")} /> */}
-          {/* <HoverCounter />
-          <ClickCounter /> */}
-          {/* <ErrorBoundary>
-            <Hero heroName="Batman" />
-          </ErrorBoundary>
-
-          <ErrorBoundary>
-            <Hero heroName="SupperMan" />
-          </ErrorBoundary>
-
-          <ErrorBoundary>
-            <Hero heroName="Joker" />
-          </ErrorBoundary> */}
-          {/* <PortalDemo /> */}
-          {/* <ForwardRefParentInput /> */}
-          {/* <RefsDemo /> */}
-          {/* <ParentComponent /> */}
-          {/* <PureComp /> */}
-          {/* <FragmentDemo /> */}
-          {/* <LifeCycleA /> */}
-          {/* <Form />
-          <Inline />
-          <Stylesheet primary={true} />
-          <h1 className="error">Error</h1>
-          <h1 className={styles.success}>Success</h1>
-          <NameList />
-          <UserGreeting />
-          <ParentComponent />
-          <EventBinding />
-          <ClassClick />
-          <Greet name="Bruce" heroName="Batman">
-            <p>This is children props</p>
-          </Greet>
-          <Greet name="Clark" heroName="SpiderMan" />
-          <Greet name="Shafiq" heroName="IronMan" />
-          <Welcome name="Bruce" heroName="Batman" />
-          <Welcome name="Clark" heroName="SpiderMan" />
-          <Welcome name="Shafiq" heroName="IronMan" />
-          <Message></Message>
-          <Counter />
-          <Welcome />
-          <Hello /> */}
+          <FocusInput />
+          {/* <MemoCounter /> */}
+          {/* <DataFetchingOne /> */}
+          {/* <CounterTwo /> */}
+          {/* <CounterThree /> */}
+          {/* Count : {count}
+          <CountContext.Provider value={{reducerCount:count,reducerDispatch:dispatch}}>
+            <ReducerComponentA />
+            <ReducerComponentB />
+            <ReducerComponentC />
+          </CountContext.Provider> */}
         </div>
       </header>
     </div>
